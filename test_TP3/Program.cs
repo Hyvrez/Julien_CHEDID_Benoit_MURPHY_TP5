@@ -41,9 +41,10 @@ namespace test_TP3
                 // this conjured item does not work properly yet
                 new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
             };
-
+            var app2 = new GildedRose_Refactoring(Items);
             var app = new GildedRose(Items);
-
+            
+            
             for (var i = 0; i < 31; i++)
             {
                 Console.WriteLine("-------- day " + i + " --------");
@@ -53,7 +54,8 @@ namespace test_TP3
                     System.Console.WriteLine(Items[j]);
                 }
                 Console.WriteLine("");
-                app.UpdateQuality();
+                //app.UpdateQuality();
+                app2.updateQuality();
                numberDay.set_day(i);
             }
 
